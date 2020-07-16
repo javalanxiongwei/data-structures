@@ -27,6 +27,16 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         public boolean isLeaf(){
             return left==null&&right==null;
         }
+        public boolean isLeftChild(){
+            return parent!=null && this == parent.left;
+        }
+        public boolean isRightChild(){
+            return parent!=null && this == parent.right;
+        }
+        public Node<E> sibling(){
+            if(parent==null) return null;
+            return isLeftChild()?parent.right:parent.left;
+        }
     }
     public void clear() {
         root = null;
@@ -217,6 +227,9 @@ public class BinaryTree<E> implements BinaryTreeInfo {
                 return false;
             }else{
                 isLeaf = true;
+                if(node.left!=null){
+                    queue.offer(node.left);
+                }
             }
         }
         return true;

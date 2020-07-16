@@ -90,11 +90,15 @@ public class BST<E> extends BinaryTree<E> {
         }
         if(node.parent==null){
             root = replaceNode;
+            afterRemove(node);
         }else if(node==node.parent.left){
             node.parent.left = replaceNode;
+            afterRemove(node);
         }else{
             node.parent.right = replaceNode;
+            afterRemove(node);
         }
+
        /* if(node.isLeaf()){
             //如果是叶子节点
             if(node.parent==null){
@@ -117,6 +121,11 @@ public class BST<E> extends BinaryTree<E> {
             }
         }*/
     }
+    /**
+     * 删除node之后的调整
+     * @param node 删除的节点
+     */
+    protected void afterRemove(Node<E> node) { }
     //判断是否包含
     public boolean contains(E element) {
         return false;
