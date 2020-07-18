@@ -90,15 +90,18 @@ public class BST<E> extends BinaryTree<E> {
         }
         if(node.parent==null){
             root = replaceNode;
-            afterRemove(node);
         }else if(node==node.parent.left){
             node.parent.left = replaceNode;
-            afterRemove(node);
         }else{
             node.parent.right = replaceNode;
-            afterRemove(node);
         }
-
+        if(replaceNode==null){
+            //删除度为0的元素
+            afterRemove(node);
+        }else{
+            //删除度为1的元素
+            afterRemove(replaceNode);
+        }
        /* if(node.isLeaf()){
             //如果是叶子节点
             if(node.parent==null){

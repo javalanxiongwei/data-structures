@@ -50,4 +50,24 @@ public class Main {
         System.out.println("=======================================================");
         BinaryTrees.println(tree);
     }
+    @Test
+    public void testRBTree(){
+        Integer[] array = new Integer[]{66, 35, 99, 86, 25, 87, 37, 1, 72, 2, 51, 63, 75, 26};
+        RBTree<Integer> tree = new RBTree<Integer>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1.compareTo(o2);
+            }
+        });
+        for(int i = 0;i<array.length;i++){
+            tree.add(array[i]);
+        }
+        BinaryTrees.println(tree);
+        tree.remove(1);
+        tree.remove(2);
+        tree.remove(26);
+        tree.remove(25);
+        System.out.println("=========================");
+        BinaryTrees.println(tree);
+    }
 }
