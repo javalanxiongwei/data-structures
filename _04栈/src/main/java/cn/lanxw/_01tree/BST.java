@@ -1,7 +1,5 @@
 package cn.lanxw._01tree;
 
-import cn.lanxw.printer.BinaryTreeInfo;
-
 import java.util.*;
 
 /**

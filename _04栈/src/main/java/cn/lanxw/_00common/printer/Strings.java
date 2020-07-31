@@ -1,4 +1,4 @@
-package cn.lanxw.printer;
+package cn.lanxw._00common.printer;
 
 public class Strings {
 	public static String repeat(String string, int count) {

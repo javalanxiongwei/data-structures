@@ -1,7 +1,7 @@
 package cn.lanxw._03map;
 
-import cn.lanxw.printer.BinaryTreeInfo;
-import cn.lanxw.printer.BinaryTrees;
+import cn.lanxw._00common.printer.BinaryTreeInfo;
+import cn.lanxw._00common.printer.BinaryTrees;
 
 import java.util.LinkedList;
 import java.util.Objects;

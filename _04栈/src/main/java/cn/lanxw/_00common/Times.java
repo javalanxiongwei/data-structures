@@ -1,4 +1,4 @@
-package cn.lanxw;
+package cn.lanxw._00common;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

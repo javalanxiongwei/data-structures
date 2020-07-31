@@ -1,4 +1,4 @@
-package cn.lanxw.file;
+package cn.lanxw._00common.file;
 
 public class FileInfo {
 	private int lines;

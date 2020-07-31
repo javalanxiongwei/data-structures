@@ -1,4 +1,4 @@
-package cn.lanxw.file;
+package cn.lanxw._00common.file;
 
 import java.io.BufferedReader;
 import java.io.File;

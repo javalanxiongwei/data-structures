@@ -1,11 +1,9 @@
 package cn.lanxw._01tree;
 
-import cn.lanxw.printer.BinaryTrees;
+import cn.lanxw._00common.printer.BinaryTrees;
 import org.junit.Test;
 
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by wolfcode-lanxw

@@ -1,4 +1,4 @@
-package cn.lanxw;
+package cn.lanxw._00common;
 
 public class Asserts {
 	public static void test(boolean value) {
