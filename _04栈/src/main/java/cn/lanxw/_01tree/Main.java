@@ -4,18 +4,21 @@ import cn.lanxw.printer.BinaryTrees;
 import org.junit.Test;
 
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by wolfcode-lanxw
  */
 public class Main {
+
     public static void main(String[] args) throws InterruptedException {
-        Integer[] array = new Integer[]{20,25};
-        /*Random random = new Random();
+        /*Integer[] array = new Integer[]{20,25};
+        *//*Random random = new Random();
         Integer[] array = new Integer[5];
         for(int i=0;i<5;i++){
             array[i] = random.nextInt(100);
-        }*/
+        }*//*
         BST<Integer> tree = new BST<Integer>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -28,12 +31,12 @@ public class Main {
         BinaryTrees.println(tree);
         tree.remove(20);
         System.out.println("=======================================================");
-        BinaryTrees.println(tree);
+        BinaryTrees.println(tree);*/
 
     }
     @Test
     public void testAVLTree(){
-        Integer[] array = new Integer[]{14, 77, 27, 81, 70, 53, 71, 10, 98, 34, 45, 13};
+        /*Integer[] array = new Integer[]{14, 77, 27, 81, 70, 53, 71, 10, 98, 34, 45, 13};
         AVLTree<Integer> tree = new AVLTree<Integer>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -48,7 +51,7 @@ public class Main {
         tree.remove(77);
         tree.remove(98);
         System.out.println("=======================================================");
-        BinaryTrees.println(tree);
+        BinaryTrees.println(tree);*/
     }
     @Test
     public void testRBTree(){
@@ -69,5 +72,16 @@ public class Main {
         tree.remove(25);
         System.out.println("=========================");
         BinaryTrees.println(tree);
+
+
+     /*  int i = 0;
+        for (int binCount = 0; ; ++binCount) {
+            i++;
+            System.out.println(i);
+            if (binCount >= 7){
+                break;
+            }
+        }*/
+
     }
 }

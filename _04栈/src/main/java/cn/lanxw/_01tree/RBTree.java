@@ -92,8 +92,8 @@ public class RBTree<E> extends BBST<E> {
                  */
                 red(parent);
                 black(sibling);
-                rotateRight(parent);
-                sibling = parent.left;
+                rotateLeft(parent);
+                sibling = parent.right;
             }
             //接着就需要判断黑兄弟是否有元素可以借的情况.
             if(isBlack(sibling.right) && isBlack(sibling.left)){
@@ -111,9 +111,9 @@ public class RBTree<E> extends BBST<E> {
             }else{
                 //黑兄弟最少有一个红色节点的情况
                 if(isRed(sibling.left) && isBlack(sibling.right)){
-                    //兄弟节点是黑--->红的情况,进行旋转，统一转换成LL的情况.
+                    //兄弟节点是黑--->红的情况,进行旋转，统一转换成RR的情况.
                     rotateRight(sibling);
-                    sibling = sibling.right;
+                    sibling = parent.right;
                 }
                 //兄弟节点继承父节点的颜色
                 color(sibling,colorOf(parent));
@@ -137,8 +137,8 @@ public class RBTree<E> extends BBST<E> {
                  */
                 red(parent);
                 black(sibling);
-                rotateLeft(parent);
-                sibling = parent.right;
+                rotateRight(parent);
+                sibling = parent.left;
             }
             //接着就需要判断黑兄弟是否有元素可以借的情况.
            if(isBlack(sibling.left) && isBlack(sibling.right)){
@@ -158,7 +158,7 @@ public class RBTree<E> extends BBST<E> {
                if(isRed(sibling.right) && isBlack(sibling.left)){
                    //兄弟节点是黑--->红的情况,进行旋转，统一转换成LL的情况.
                    rotateLeft(sibling);
-                   sibling = sibling.left;
+                   sibling = parent.left;
                }
                //兄弟节点继承父节点的颜色
                color(sibling,colorOf(parent));

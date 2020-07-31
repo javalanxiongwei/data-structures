@@ -70,8 +70,9 @@ public class BinaryTree<E> implements BinaryTreeInfo {
     public Object string(Object node) {
         return ((Node)node).element;
     }
-    interface Visitor<E>{
-        void visit(E element);
+    public interface Visitor<E>{
+        boolean stop = false;
+        boolean visit(E element);
     }
     //前序遍历
     public void preOrderTreeTraversal(Visitor visitor){

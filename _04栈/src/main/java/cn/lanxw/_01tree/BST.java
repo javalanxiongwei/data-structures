@@ -61,7 +61,7 @@ public class BST<E> extends BinaryTree<E> {
         Node<E> node = root;
         int compare = 0;
         while(node!=null){
-            compare = comparator.compare(element,node.element);
+            compare = compare(element,node.element);
             if(compare ==0){
                 return node;
             }else if(compare >0){
@@ -78,6 +78,7 @@ public class BST<E> extends BinaryTree<E> {
     }
     private void remove(Node<E> node) {
         if(node==null) return;
+        size--;
         //如果元素有两个节点，找到后继节点，替换内容.
         if(node.hasTwoChildren()){
             Node<E> successor = successor(node);
@@ -133,4 +134,5 @@ public class BST<E> extends BinaryTree<E> {
     public boolean contains(E element) {
         return false;
     }
+
 }
