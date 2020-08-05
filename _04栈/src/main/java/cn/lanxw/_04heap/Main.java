@@ -26,27 +26,27 @@ public class Main {
 	}
 	
 	static void test2() {
-		/*Integer[] data = {88, 44, 53, 41, 16, 6, 70, 18, 85, 98, 81, 23, 36, 43, 37};
+		Integer[] data = {88, 44, 53, 41, 16, 6, 70, 18, 85, 98, 81, 23, 36, 43, 37};
 		BinaryHeap<Integer> heap = new BinaryHeap<>(data);
 		BinaryTrees.println(heap);
 		
 		data[0] = 10;
 		data[1] = 20;
-		BinaryTrees.println(heap);*/
+		BinaryTrees.println(heap);
 	}
 	
 	static void test3() {
-		/*Integer[] data = {88, 44, 53, 41, 16, 6, 70, 18, 85, 98, 81, 23, 36, 43, 37};
+		Integer[] data = {88, 44, 53, 41, 16, 6, 70, 18, 85, 98, 81, 23, 36, 43, 37};
 		BinaryHeap<Integer> heap = new BinaryHeap<>(data, new Comparator<Integer>() {
 			public int compare(Integer o1, Integer o2) {
 				return o2 - o1;
 			}
 		});
-		BinaryTrees.println(heap);*/
+		BinaryTrees.println(heap);
 	}
 	
 	static void test4() {
-		/*// 新建一个小顶堆
+		// 新建一个小顶堆
 		BinaryHeap<Integer> heap = new BinaryHeap<>(new Comparator<Integer>() {
 			public int compare(Integer o1, Integer o2) {
 				return o2 - o1;
@@ -54,7 +54,7 @@ public class Main {
 		});
 		
 		// 找出最大的前k个数
-		int k = 3;
+		int k = 4;
 		Integer[] data = {51, 30, 39, 92, 74, 25, 16, 93, 
 				91, 19, 54, 47, 73, 62, 76, 63, 35, 18, 
 				90, 6, 65, 49, 3, 26, 61, 21, 48};
@@ -66,11 +66,11 @@ public class Main {
 			}
 		}
 		// O(nlogk)
-		BinaryTrees.println(heap);*/
+		BinaryTrees.println(heap);
 	}
 
 	public static void main(String[] args) {
-		test1();
+        test4();
 	}
 
 }

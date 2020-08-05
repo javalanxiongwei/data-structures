@@ -7,13 +7,37 @@ import java.util.Comparator;
 /**
  * Created by lanxw
  */
-public class BinaryHeap<E> implements Heap<E>,BinaryTreeInfo {
+public class BinaryHeap<E extends Comparable> implements Heap<E>,BinaryTreeInfo {
     private static final int DEFAULT_CAPACITY = 10;
     private int size;
     private E[] elements;
     private Comparator<E> comparator;
+    public BinaryHeap(E[] array,Comparator<E> comparator){
+        this.comparator = comparator;
+        int arrayLength;
+        if(array==null || (arrayLength = array.length) ==0){
+            elements = (E[]) new Comparable[DEFAULT_CAPACITY];
+        }else{
+            size = arrayLength;
+            int capacity = Math.max(arrayLength, DEFAULT_CAPACITY);
+            elements = (E[]) new Comparable[capacity];
+            System.arraycopy(array,0,elements,0, arrayLength);
+            heapify();
+        }
+    }
+    public BinaryHeap(E[] array){
+        this(array,null);
+    }
+    public BinaryHeap(Comparator<E> comparator){
+        this(null,comparator);
+    }
     public BinaryHeap(){
-        elements = (E[]) new Object[DEFAULT_CAPACITY];
+        this(null,null);
+    }
+    private void heapify() {
+        for(int i = (elements.length>>1)-1;i>=0;i--){
+            siftDown(i);
+        }
     }
     @Override
     public int size() {
@@ -43,8 +67,17 @@ public class BinaryHeap<E> implements Heap<E>,BinaryTreeInfo {
             elements[size++] = element;
             return;
         }
+        ensureCapacity(size+1);
         elements[size] = element;
         siftUp(size++);
+    }
+
+    private void ensureCapacity(int size) {
+        int oldCap = elements.length;
+        if(size <= oldCap) return;
+        int newCap = oldCap+oldCap>>1;
+        E[] newElements = (E[]) new Comparable[newCap];
+        System.arraycopy(elements,0,newElements,0,elements.length);
     }
 
     /**
