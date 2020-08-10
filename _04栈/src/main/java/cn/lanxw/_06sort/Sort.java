@@ -53,7 +53,7 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
 		array[i2] = tmp;
 	}
 	
-	/*@Override
+	@Override
 	public String toString() { 
 		String timeStr = "耗时：" + (time / 1000.0) + "s(" + time + "ms)";
 		String compareCountStr = "比较：" + numberString(cmpCount);
@@ -66,7 +66,7 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
 				+ swapCountStr + "\n"
 				+ "------------------------------------------------------------------";
 
-	}*/
+	}
 	
 	private String numberString(int number) {
 		if (number < 10000) return "" + number;
@@ -75,7 +75,7 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
 		return fmt.format(number / 100000000.0) + "亿";
 	}
 	
-	/*private boolean isStable() {
+	private boolean isStable() {
 		Student[] students = new Student[20];
 		for (int i = 0; i < students.length; i++) {
 			students[i] = new Student(i * 10, 10);
@@ -87,5 +87,5 @@ public abstract class Sort<T extends Comparable<T>> implements Comparable<Sort<T
 			if (score != prevScore + 10) return false;
 		}
 		return true;
-	}*/
+	}
 }

@@ -8,9 +8,17 @@ import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
-		Integer[] array = {7, 3, 5, 8, 6, 7, 4, 5};
-		BubbleSort02 bubbleSort02 = new BubbleSort02();
-		testSorts(array, bubbleSort02);
+		//Integer[] array = {7, 3, 5, 8, 6, 7, 4, 5};
+		Integer[] array = Integers.random(5000,10,10000);
+		testSorts(array,
+				new InsertionSort01(),
+				new InsertionSort02(),
+				new InsertionSort03(),
+				new BubbleSort01(),
+				new SelectionSort01(),
+				new MergeSort01(),
+				new HeapSort01()
+		);
 	}
 	
 	static void testSorts(Integer[] array, Sort... sorts) {

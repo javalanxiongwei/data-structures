@@ -3,7 +3,7 @@ package cn.lanxw._06sort;
 /**
  * Created by lanxw
  */
-public class BubbleSort extends Sort {
+public class BubbleSort01 extends Sort {
     @Override
     protected void sort() {
         for(int i = array.length-1;i>=0;i--){
