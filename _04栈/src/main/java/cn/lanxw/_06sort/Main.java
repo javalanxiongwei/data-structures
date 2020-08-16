@@ -9,17 +9,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		//Integer[] array = {7, 3, 5, 8, 6, 7, 4, 5};
-		//Integer[] array = Integers.random(5000,10,10000);
-		Integer[] array = Integers.same(10000,500);
+		Integer[] array = Integers.random(10000,10,10000);
+		//Integer[] array = Integers.same(10000,500);
 		testSorts(array,
-				/*new InsertionSort01(),
+				new InsertionSort01(),
 				new InsertionSort02(),
 				new InsertionSort03(),
 				new BubbleSort01(),
 				new SelectionSort01(),
 				new MergeSort01(),
-				new HeapSort01(),*/
-				new QuickSort()
+				new HeapSort01(),
+				new QuickSort(),
+				new ShellSort()
 		);
 	}
 	
